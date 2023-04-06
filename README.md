@@ -8,9 +8,11 @@ that you can use in your fragment's CSS. E.g. in the Dialect Theme, you may
 use `var(--color-brand-primary-lighten-2)` to address a color from the configured
 stylebook
 
-## How to use
+## How to build/use
 
-Place this plugin in a Liferay Workspace's `modules` directory, build and deploy it. 
+Place this plugin in a Liferay Workspace's `modules` directory, build and deploy it.
+
+This plugin has been developed with `liferay.workspace.product=dxp-7.4-u70`. 
 
 It automatically creates a button in the ProductMenu of the Fragments Editor
 
