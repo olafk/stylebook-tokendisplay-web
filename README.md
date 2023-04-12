@@ -3,7 +3,7 @@
 ## What is this?
 
 This plugin generates a button in the fragment editor that gives you access
-to all themes' usable CSS tokens, so that you have a reference of the values
+to either the Classic or Dialect themes' usable CSS tokens via their own sample portlets, so that you have a reference of the values
 that you can use in your fragment's CSS. E.g. in the Dialect Theme, you may 
 use `var(--color-brand-primary-lighten-2)` to address a color from the configured
 stylebook
@@ -14,12 +14,18 @@ Place this plugin in a Liferay Workspace's `modules` directory, build and deploy
 
 This plugin has been developed with `liferay.workspace.product=dxp-7.4-u70`. 
 
-It automatically creates a button in the ProductMenu of the Fragments Editor
+It automatically creates a button in the ProductMenu of the Fragments Editor if either of the known themes is active in the current site's LayoutSet
 
 ## To Do
 
-The UI is _extremely simple_. Feel free to contribute something more fancy.
+Requires manual updates when other themes come with their own sample widget 
 
-## Screenshot
+## Screenshots
 
-![test](stylebook-tokendisplay-web-screenshot.png)
+### Dialect Theme
+
+![Dialect Sample](stylebook-tokendisplay-dialect-screenshot.png)
+
+### Classic Theme
+
+![Classic Sample](stylebook-tokendisplay-classic-screenshot.png)
