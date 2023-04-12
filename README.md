@@ -16,6 +16,8 @@ This plugin has been developed with `liferay.workspace.product=dxp-7.4-u70`.
 
 It automatically creates a button in the ProductMenu of the Fragments Editor if either of the known themes is active in the current site's LayoutSet
 
+You'll also need to drop the config files in this project's `supporting-config` folder into your instance's `osgi/configs` folder, so that the sample portlets are properly configured.
+
 ## To Do
 
 Requires manual updates when other themes come with their own sample widget 

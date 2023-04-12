@@ -13,8 +13,12 @@ page import="com.liferay.portal.kernel.portlet.LiferayPortletURL"%>
 <portlet:defineObjects />
 
 <%
-LiferayPortletURL modalPortletURL = PortletURLFactoryUtil.create(request, (String) request.getAttribute("styleGuidePortletId"), 
-		LayoutLocalServiceUtil.getDefaultPlid(scopeGroupId), PortletRequest.RENDER_PHASE);
+LiferayPortletURL modalPortletURL = 
+	PortletURLFactoryUtil.create(
+		request, 
+		(String) request.getAttribute("styleGuidePortletId"), 
+		LayoutLocalServiceUtil.getDefaultPlid(scopeGroupId), 
+		PortletRequest.RENDER_PHASE);
 modalPortletURL.setWindowState(LiferayWindowState.POP_UP);
 %>
 <script>
