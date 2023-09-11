@@ -78,15 +78,6 @@ public class StyleBookTokenDisplayProductNavigationControlMenuEntry extends Base
 		LayoutSet layoutSet = LayoutSetLocalServiceUtil.getLayoutSet(scopeGroupId, false);
 		Theme theme = layoutSet.getTheme();
 		
-		// is there a generic way to detect if a theme comes with a documentation sample portlet?
-		// These themes are handled in StyleBookSampleProductNavigationControlMenuEntry with a 
-		// different popup
-		if(theme.getName().equals("Dialect")) {
-			return false;
-		} else if(theme.getName().equals("Classic")) {
-			return false;
-		}
-
 		PortletDisplay portletDisplay = themeDisplay.getPortletDisplay();
 
 		String mvcRenderCommandName = ParamUtil.getString(
@@ -110,7 +101,7 @@ public class StyleBookTokenDisplayProductNavigationControlMenuEntry extends Base
 	private String toHtml(HttpServletRequest httpServletRequest, Theme theme, Map<String, List<String>> definitions) {
 		StringBuffer result = new StringBuffer();
 		result.append("<h1>"+theme.getName()+"</h1>");
-
+		result.append("<p>Use these tokens in your fragment's CSS, e.g. as <code>color: var(--token-name);</code></p>");
 		for (String category : definitions.keySet()) {
 			result.append("<h2>" + LanguageUtil.get(httpServletRequest, category) + "</h2><ul>");
 			for (String entry : definitions.get(category)) {

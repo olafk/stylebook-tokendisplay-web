@@ -1,5 +1,4 @@
 <%@ include file="/init.jsp" %>
-
 <script>
 showRawTokens = function() {
 	var win = window.open("", "Tokens", "toolbar=no,location=no,directories=no,status=no,menubar=no," 
@@ -9,8 +8,6 @@ showRawTokens = function() {
 	win.focus();
 };
 </script>
-
-
 <label class="align-baseline mb-0 mr-3">
 	<clay:link
 		displayTye="secondary"

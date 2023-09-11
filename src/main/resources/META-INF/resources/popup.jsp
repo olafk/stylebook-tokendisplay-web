@@ -35,10 +35,10 @@ showTokens = function() {
 			displayTye="secondary"
 			href="javascript:showTokens();"
 			icon="list"
-			label="stylebook-tokens"
+			label="style-guide"
 			outline="<%= true %>"
 			small="<%= true %>"
-			title="stylebook-tokens"
+			title="style-guide"
 			type="button"
 		/>
 	</label>
