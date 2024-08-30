@@ -86,7 +86,7 @@ public class StyleBookTokenDisplayProductNavigationControlMenuEntry extends Base
 
 		if (Objects.equals(
 				mvcRenderCommandName, "/fragment/edit_fragment_entry")) {
-			Map<String, List<String>> definitions = provideTokens(httpServletRequest, theme);
+			Map<String, List<String>> definitions = provideTokens(httpServletRequest, layoutSet);
 			if(definitions.isEmpty()) {
 				// Theme does not declare tokens
 				return false;
@@ -111,12 +111,10 @@ public class StyleBookTokenDisplayProductNavigationControlMenuEntry extends Base
 		}
 		return result.toString();
 	}
-
 	
-	
-	private Map<String, List<String>> provideTokens(HttpServletRequest httpServletRequest, Theme theme) {
+	private Map<String, List<String>> provideTokens(HttpServletRequest httpServletRequest, LayoutSet layoutSet) {
 		ThemeDisplay themeDisplay = (ThemeDisplay) httpServletRequest.getAttribute(WebKeys.THEME_DISPLAY);
-		FrontendTokenDefinition frontendTokenDefinition = frontendTokenDefinitionRegistry.getFrontendTokenDefinition(theme.getThemeId());
+		FrontendTokenDefinition frontendTokenDefinition = frontendTokenDefinitionRegistry.getFrontendTokenDefinition(layoutSet);
 		LinkedHashMap<String, List<String>> definitions = new LinkedHashMap<String, List<String>>();
 		if(frontendTokenDefinition==null) {
 			return definitions;
